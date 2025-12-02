@@ -80,7 +80,7 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
         const newUser = new UserModel({
           username: user.name,
           email: user.email,
-          password: "nopassword",
+          password: "sso_user_no_password",
           verifyCode: "google",
           verifyCodeExpiry: new Date(),
           isVerified: true,

@@ -112,7 +112,7 @@ function Page() {
 
   return (
     <div className="bg-slate-300  min-h-screen flex justify-center bg-grid-pattern14 dark:bg-grid-pattern2 bg-cover bg-center items-center">
-      <div className="max-w-[25rem] -translate-y-[10%] w-4/5 h-5/6 mt-4 bg-slate-50 dark:bg-black/90    rounded-xl  border  px-8 py-8">
+      <div className="max-w-[25rem] -translate-y-[10%] sm:-translate-y-0 w-4/5 h-5/6 mt-4 bg-slate-50 dark:bg-black/90    rounded-xl  border px-4  sm:px-8 py-8">
          <Intro/>
         <Form {...form}>
           <form
@@ -190,13 +190,13 @@ function Page() {
         <div className="flex my-4 gap-x-8">
           <Button
             onClick={() => signIn("google", { redirectTo: "/dashboard" })}
-            className="dark:bg-white dark:text-black m-auto md:w-2/3 w-fit  text-white dark:hover:bg-green-400 hover:bg-green-400"
+            className="dark:bg-white w-full dark:text-black m-auto md:w-2/3 sm:w-fit  text-white dark:hover:bg-green-400 hover:bg-green-400"
           >
             <Mail />
           </Button>
           <Button
             onClick={() => signIn("github", { redirectTo: "/dashboard" })}
-            className="dark:bg-white dark:text-black m-auto md:w-2/3 w-fit dark:hover:bg-green-400 text-white hover:bg-green-400"
+            className="dark:bg-white w-full  dark:text-black m-auto md:w-2/3 sm:w-fit dark:hover:bg-green-400 text-white hover:bg-green-400"
           >
             <Github />
           </Button>

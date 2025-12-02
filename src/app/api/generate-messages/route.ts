@@ -3,6 +3,9 @@ import { GenerateMessageSchema } from "@/schemas/generateMessageSchema";
 import { google } from "@ai-sdk/google";
 import { streamObject } from "ai";
 
+
+const GOOGLE_GENERATIVE_MODEL = process.env.GOOGLE_GENERATIVE_MODEL || "gemini-2.0-flash";
+
 export const maxDuration = 30;
 
 export const POST = auth(async function POST(request) {
@@ -21,9 +24,9 @@ export const POST = auth(async function POST(request) {
   }
   try {
     const obj = streamObject({
-      model: google("gemini-1.5-flash"),
+      model: google(GOOGLE_GENERATIVE_MODEL),
       maxTokens: 200,
-      temperature:1,
+      temperature: 1,
       prompt: "generate three message like this that follow that schema",
       schema: GenerateMessageSchema,
     });

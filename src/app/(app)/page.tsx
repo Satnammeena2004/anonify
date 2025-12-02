@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div
-      className="relative bg-cover bg-center font-[family-name:var(--font-geist-sans)] flex justify-center items-center h-full max-w-screen-xl mx-auto"
+      className="relative bg-cover bg-center font-[family-name:var(--font-geist-sans)] flex justify-center items-center h-full max-w-screen-xl mx-auto translate-y-14 sm:translate-y-0"
     >
       <div className="mx-auto h-full w-80 sm:w-2/4 max-w-screen-xl lg:max-w-5xl xl:max-w-7xl">
         <h1 className="h1 px-4 lg:px-12 w-fit mx-auto font-bold uppercase mt-6 origin-center">
